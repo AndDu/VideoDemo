@@ -36,16 +36,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         iv_return = findViewById(R.id.iv_return);
         iv_fullgreen = findViewById(R.id.iv_fullgreen);
         videoview.setVideoPath("http://www.i5campus.com:9037/HAPPYOUVService/uploadFile/video/video.mp4");
-        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.start();
-                rate = mp.getVideoWidth()*1f / mp.getVideoHeight();
-            }
-        });
+//        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//            @Override
+//            public void onPrepared(MediaPlayer mp) {
+//                mp.start();
+//                rate = mp.getVideoWidth()*1f / mp.getVideoHeight();
+//            }
+//        });
         fl_controller.setOnClickListener(this);
         iv_return.setOnClickListener(this);
         iv_fullgreen.setOnClickListener(this);
+
+
+        Test test = new Test();
+        test.initMediaDecode();
     }
 
     @Override
